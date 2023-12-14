@@ -3,7 +3,7 @@
 const body =document.querySelector('body')
 //creamos una funcion que nos de fondos aleatorios
 const fondo =()=>{
-    const numAleat = Math.floor(Math.random() * 12);
+    const numAleat = Math.floor(Math.random() * 11)+1;
     body.style.backgroundImage = `url("../assets/img/${numAleat}.jpg")`;
 }
 //le damos intervalo de tiempo para que se vaya repitiendo la funcion fondo

@@ -42,6 +42,10 @@ table {
 	border-spacing: 0;
 }
 
+
+body{
+    background-size:cover;
+}
 /*empezamos a crear los estilos del header*/
 header{
     display: flex;
@@ -72,14 +76,32 @@ nav a{
 }
 .containerReloj{
     font-size: 25px;
+    border: 2px black solid;
+    padding:20px;
+    background-color: antiquewhite;
+    font-style:initial;
 }
 .divDia{
-    font-size: 40px;
+    font-size: 50px;
+    padding-top: 20px;
+    font-weight: 600;
 }
 .divHora{  
-    color: #000000;
+    padding: 20px 0px;
     font-weight: 800;
     font-size: 70px;
-    font-style:initial;
-    text-shadow: 0 0 20px rgba(10,175, 230,1), 0 0 20px rgba(10,175, 230,0) ;
+    text-shadow: 1px -4px 7px rgba(13,43,253,0.6); ;
+}
+
+#links{
+    margin: 150px 0px;
+    display: flex;
+    justify-content: center;
+}
+form{
+    background-color: beige;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
 }
