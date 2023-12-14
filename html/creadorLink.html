@@ -9,14 +9,14 @@
 <body>
     <header>
         <h4>
-            Dashboard
+           Links
         </h4>
         <nav>
             <a href="../Index.html">Home</a>
-            <a href="./reloj.html">⌚</a> 
-            <a href="./Tiempo">Tiempo</a>
-            <a href="./creadorLink.html">Creador links</a>
-            <a href="./creadorContrasenas">🔓</a>
+            <a href="../html/reloj.html">⌚</a> 
+            <a href="../html/tiempo">Tiempo</a>
+            <a href="../html/creadorLink.html">Creador links</a>
+            <a href="../html/creadorContrasenas">🔓</a>
         </nav>
     </header>
 <main>
@@ -24,13 +24,16 @@
 <article id="links">
     <form>
         <legend>Introduzca tus enlaces de interes</legend>
-        <input type="text" placeholder="Nombre del enlace"/>
-        <input type="text" placeholder="Pega el enlace"/>
-        <button>Enviar</button>
+        <label for="nombre">Nombre Enlace:</label>
+        <input type="text" id="nombre"name="nombre" placeholder="Nombre del enlace"/>
+        <label for="enlace">Enlace:</label>
+        <input type="text" id="enlace" name="enlace" placeholder="Pega el enlace"/>
+        <button class="btn">Enviar</button>
     </form>
+    <div id="favoritos"></div>
 </article>
 </section>
 </main>    
 </body>
-<script src="./js/contrasenas.js"></script>
+<script src="../js/links.js"></script>
 </html>

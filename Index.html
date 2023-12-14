@@ -12,10 +12,10 @@
             Dashboard
         </h4>
         <nav>
-            <a href="./reloj.html">⌚</a> 
-            <a href="./Tiempo">Tiempo</a>
-            <a href="./creadorLink.html">Creador links</a>
-            <a href="./creadorContrasenas">🔓</a>
+            <a href="../html/reloj.html">⌚</a> 
+            <a href="../html/Tiempo">Tiempo</a>
+            <a href="../html/creadorLink.html">Creador links</a>
+            <a href="../html/creadorContrasenas.html">🔓</a>
         </nav>
     </header>
 <main>
@@ -23,8 +23,24 @@
 <article id="reloj"> 
 </article>
 <article id="links">
+    <form>
+        <legend>Introduzca tus enlaces de interes</legend>
+        <label for="nombre">Nombre Enlace:</label>
+        <input type="text" id="nombre"name="nombre" placeholder="Nombre del enlace"/>
+        <label for="enlace">Enlace:</label>
+        <input type="text" id="enlace" name="enlace" placeholder="Pega el enlace"/>
+        <button class="btn">Enviar</button>
+    </form>
+    <div id="favoritos"></div>
 </article>
-</section>
+<article id="contraseñas">
+    <form>
+        <legend>Creador contraseñas</legend>
+        <label for="number">Escoje un numero</label>
+        <input id="number" type="number" min="12" max="50" step="1" value="12">
+        <button class="btn" id="btn_contraseña">Crear</button>
+    </form>
+</article>
 </main>    
 </body>
 <script src="./js/script.js"></script>
