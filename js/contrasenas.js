@@ -14,22 +14,25 @@ const divContra =document.getElementById('div_contra')
  let password =''
  
 const may='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-const arrMay = may.split('')
-
 const min ='abcdefghijklmnopqrstuvwxyz'
-const arrMin = min.split('')
-
 const num ='0123456789'
-const arrNum= num.split('')
-
 const simb = '!@#$%^&*()-_=+'
-const arrSimb= simb.split('')
+const total= may +min +num +simb
 
 
 
 
 
 btnContra.addEventListener('click',(e)=>{
+    let limite =number.value
     e.preventDefault();
     divContra.innerHTML =''
+    password += may[Math.floor(Math.random()*may.length)]
+    password += min[Math.floor(Math.random()*min.length)]
+    password += num[Math.floor(Math.random()*num.length)]
+    password += simb[Math.floor(Math.random()*simb.length)]
+    do 
+        password +=total[Math.floor(Math.random()*total.length)]
+        while (password.length===limite)
+    divContra.innerHTML=`tu contraseña es:${password}`
 })
