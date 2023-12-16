@@ -33,6 +33,6 @@ btnContra.addEventListener('click',(e)=>{
     password += simb[Math.floor(Math.random()*simb.length)]
     do 
         password +=total[Math.floor(Math.random()*total.length)]
-        while (password.length===limite)
+        while (password.length < limite)
     divContra.innerHTML=`tu contraseña es:${password}`
 })
