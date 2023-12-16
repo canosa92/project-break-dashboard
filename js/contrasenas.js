@@ -28,6 +28,7 @@ btnContra.addEventListener('click',(e)=>{
     let limite =number.value
     e.preventDefault();
     divContra.innerHTML=''
+    password=''
     password += may(Math.floor(Math.random()*may.length))
     password += min(Math.floor(Math.random()*min.length))
     password += num(Math.floor(Math.random()*num.length))
