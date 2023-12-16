@@ -28,10 +28,10 @@ btnContra.addEventListener('click',()=>{
     let limite =number.value
     divContra.innerHTML=''
 
-    password += may(Math.floor(Math.random()*may.length))
-    password += min(Math.floor(Math.random()*min.length))
-    password += num(Math.floor(Math.random()*num.length))
-    password += simb(Math.floor(Math.random()*simb.length))
+    password += may[Math.floor(Math.random()*may.length)]
+    password += min[Math.floor(Math.random()*min.length)]
+    password += num[Math.floor(Math.random()*num.length)]
+    password += simb[Math.floor(Math.random()*simb.length)]
     do 
         password +=total(Math.floor(Math.random()*total.length))
         while (password.length < limite)
