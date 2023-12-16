@@ -27,7 +27,7 @@ const total= may +min +num +simb
 btnContra.addEventListener('click',()=>{
     let limite =number.value
     divContra.innerHTML=''
-    password=''
+
     password += may(Math.floor(Math.random()*may.length))
     password += min(Math.floor(Math.random()*min.length))
     password += num(Math.floor(Math.random()*num.length))
