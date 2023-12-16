@@ -70,6 +70,7 @@ nav a{
 /*vamos con el main */
 section{
     display: flex;
+	wrap:no-wrap;
     justify-content: space-between;
     flex-direction: row;
     gap:10px;
