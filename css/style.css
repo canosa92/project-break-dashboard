@@ -70,7 +70,7 @@ nav a{
 /*vamos con el main */
 section{
     display: flex;
-	wrap:no-wrap;
+	no-wrap:wrap;
     justify-content: space-between;
     flex-direction: row;
     gap:10px;
@@ -126,4 +126,7 @@ button{
     height: 25px;
     width: 100px;
     margin: 10px;
+}
+p{
+    font-size: 14px;;
 }

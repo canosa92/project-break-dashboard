@@ -50,7 +50,7 @@ divHora.classList.add('divHora')
 const containerReloj = document.createElement('div')
 containerReloj.classList.add('containerReloj')
 
-divDia.innerHTML=`${fecha.getDay()}/${mes[fecha.getMonth()]}/${fecha.getUTCFullYear()}`
+divDia.innerHTML=`${fecha.getDate()}/${mes[fecha.getMonth()]}/${fecha.getUTCFullYear()}`
 divHora.innerHTML=`${horas}:${minutos}:${segundos}`
 containerReloj.innerText=textoAlt
 containerReloj.appendChild(divDia)

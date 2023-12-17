@@ -62,7 +62,7 @@ divHora.classList.add('divHora')
 const containerReloj = document.createElement('div')
 containerReloj.classList.add('containerReloj')
 
-divDia.innerHTML=`${fecha.getDay()}/${mes[fecha.getMonth()]}/${fecha.getUTCFullYear()}`
+divDia.innerHTML=`${fecha.getDate()}/${mes[fecha.getMonth()]}/${fecha.getUTCFullYear()}`
 divHora.innerHTML=`${horas}:${minutos}:${segundos}`
 containerReloj.innerText=textoAlt
 containerReloj.appendChild(divDia)
@@ -72,14 +72,42 @@ reloj.appendChild(containerReloj)
 },1000)
 }
 
+//
+let guardar=JSON.parse(localStorage.getItem('enlaces'))||[]  
+const nombreLink =document.getElementById('nombre')
+const link=document.getElementById('enlace')
+const btnguardar= document.getElementById('btn_guardar')
+console.log(nombreLink)
 
 
 
 
 
+//Nos traemos los elementos del Dom que nos interesa
+const number =document.getElementById('number')
+const btnContra= document.getElementById('btn_contraseña')
+const divContra =document.getElementById('div_contra')
 
+const may='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+const min ='abcdefghijklmnopqrstuvwxyz'
+const num ='0123456789'
+const simb = '!@#$%^&*()-_=+'
+const total= may +min +num +simb
 
-
+btnContra.addEventListener('click',(e)=>{
+    let limite =number.value
+    divContra.innerHTML=''
+   let password=''
+e.preventDefault()
+    password += may[Math.floor(Math.random()*may.length)]
+    password += min[Math.floor(Math.random()*min.length)]
+    password += num[Math.floor(Math.random()*num.length)]
+    password += simb[Math.floor(Math.random()*simb.length)]
+    do 
+        password +=total[Math.floor(Math.random()*total.length)]
+        while (password.length < limite)
+    divContra.innerHTML=`<p>tu contraseña es: ${password}</p>`
+})
 
 
 horaActual()

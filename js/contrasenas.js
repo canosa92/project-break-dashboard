@@ -12,7 +12,7 @@ setInterval(()=>fondo(),15000)
 const number =document.getElementById('number')
 const btnContra= document.getElementById('btn_contraseña')
 const divContra =document.getElementById('div_contra')
- let password =''
+
  
 const may='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 const min ='abcdefghijklmnopqrstuvwxyz'
@@ -24,16 +24,19 @@ const total= may +min +num +simb
 
 
 
-btnContra.addEventListener('click',()=>{
+btnContra.addEventListener('click',(e)=>{
     let limite =number.value
     divContra.innerHTML=''
+   let password=''
+e.preventDefault()
+
 
     password += may[Math.floor(Math.random()*may.length)]
     password += min[Math.floor(Math.random()*min.length)]
     password += num[Math.floor(Math.random()*num.length)]
     password += simb[Math.floor(Math.random()*simb.length)]
     do 
-        password +=total(Math.floor(Math.random()*total.length))
+        password +=total[Math.floor(Math.random()*total.length)]
         while (password.length < limite)
-    divContra.innerHTML=`tu contraseña es:${password}`
+    divContra.innerHTML=`<p>tu contraseña es: ${password}</p>`
 })
