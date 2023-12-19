@@ -73,16 +73,54 @@ reloj.appendChild(containerReloj)
 }
 
 //
-let guardar=JSON.parse(localStorage.getItem('enlaces'))||[]  
-const nombreLink =document.getElementById('nombre')
-const link=document.getElementById('enlace')
+
 const btnguardar= document.getElementById('btn_guardar')
-console.log(nombreLink)
+const favoritos=document.getElementById('favoritos')
 
 
 
+btnguardar.addEventListener('click',(e)=>{
+     e.preventDefault()
+    let nombreLink =document.getElementById('nombre').value
+    let link=document.getElementById('enlace').value
+ 
+    if (!nombreLink || !link) {
+        alert('Debes introducir el Nombre del enlace y el Enlace');
+        return;
+    }
+    dibujarLink(nombreLink,link) 
+    let guardarLinks=JSON.parse(localStorage.getItem('links'))||[]
+    guardarLinks.push({nombreLink,link})
+    localStorage.setItem(`links`,JSON.stringify(guardarLinks))
+})
+function dibujarLink(nombreLink,link){ 
+    let  divLink=document.createElement('li') 
 
+    let html =`<div class='divLink'>
+    <p><a href='${link}'>${nombreLink}</a></p>
+    <button class="btnLink" onclick="eliminarLinks(this)">X</button>
+    </div>`
 
+    divLink.innerHTML=html
+    favoritos.appendChild(divLink)
+    console.log(html)
+
+}
+function mostrarLinks(){
+    const linksGuardados= JSON.parse(localStorage.getItem('links'));
+    linksGuardados.forEach((nombreLink, link) => {
+        dibujarLink(nombreLink.nombreLink,nombreLink.link);
+        
+    });
+}
+mostrarLinks()
+function eliminarLinks(elemento){
+    const linksGuardados= JSON.parse(localStorage.getItem("links"))
+    const linkIndex=Array.from(favoritos.children).indexOf(elemento.parentNode)
+    elemento.parentNode.remove()
+    linksGuardados.splice(linkIndex,1)
+    localStorage.setItem("links",JSON.stringify(linksGuardados))
+}
 //Nos traemos los elementos del Dom que nos interesa
 const number =document.getElementById('number')
 const btnContra= document.getElementById('btn_contraseña')
@@ -105,8 +143,9 @@ e.preventDefault()
     password += simb[Math.floor(Math.random()*simb.length)]
     do 
         password +=total[Math.floor(Math.random()*total.length)]
-        while (password.length < limite)
-    divContra.innerHTML=`<p>tu contraseña es: ${password}</p>`
+        while (password.length <= limite)
+        divContra.innerHTML=`<p>tu contraseña es:<br>
+                        <span>${password}</span></p>`   
 })
 
 
