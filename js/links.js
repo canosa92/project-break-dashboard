@@ -1,13 +1,16 @@
-/*Vamos con el fondo aleatorio*/
-const body =document.querySelector('body')
 
+/*Vamos con el fondo aleatorio*/
+//traemos el body
+const body =document.querySelector('body')
+//creamos una funcion que nos de fondos aleatorios
 const fondo =()=>{
     const numAleat = Math.floor(Math.random() * 11)+1;
     body.style.backgroundImage = `url("../assets/img/${numAleat}.jpg")`;
 }
+//le damos intervalo de tiempo para que se vaya repitiendo la funcion fondo
 setInterval(()=>fondo(),15000)
 
-//traemos los elementos del dom que nos interesa
+
 
 const btnguardar= document.getElementById('btn_guardar')
 const favoritos=document.getElementById('favoritos')
@@ -43,7 +46,7 @@ function dibujarLink(nombreLink,link){
 }
 function mostrarLinks(){
     const linksGuardados= JSON.parse(localStorage.getItem('links'));
-    linksGuardados.forEach((nombreLink) => {
+    linksGuardados.forEach((nombreLink,) => {
         dibujarLink(nombreLink.nombreLink,nombreLink.link);
         
     });
@@ -57,10 +60,7 @@ function eliminarLinks(elemento){
     localStorage.setItem("links",JSON.stringify(linksGuardados))
 }
 
-
-
-
-
+fondo()
 
 
 

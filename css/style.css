@@ -79,6 +79,7 @@ section{
     display: flex; 
      width: 200px;
     height:auto;
+    justify-content: center;
 }
 .containerReloj{
     font-size: 20px;
