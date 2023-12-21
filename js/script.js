@@ -97,18 +97,17 @@ function dibujarLink(nombreLink,link){
     let  divLink=document.createElement('li') 
 
     let html =`<div class='divLink'>
-    <p><a href='${link}'>${nombreLink}</a></p>
     <button class="btnLink" onclick="eliminarLinks(this)">X</button>
+    <p><a href='${link}'>${nombreLink}</a></p>
     </div>`
 
     divLink.innerHTML=html
     favoritos.appendChild(divLink)
-    console.log(html)
 
 }
 function mostrarLinks(){
     const linksGuardados= JSON.parse(localStorage.getItem('links'));
-    linksGuardados.forEach((nombreLink, link) => {
+    linksGuardados.forEach((nombreLink,) => {
         dibujarLink(nombreLink.nombreLink,nombreLink.link);
         
     });
@@ -144,8 +143,8 @@ e.preventDefault()
     do 
         password +=total[Math.floor(Math.random()*total.length)]
         while (password.length <= limite)
-        divContra.innerHTML=`<p>tu contraseña es:<br>
-                        <span>${password}</span></p>`   
+        divContra.innerHTML=`<h4>tu contraseña es:<br>
+                        <span>${password}</span></h4>`   
 })
 
 

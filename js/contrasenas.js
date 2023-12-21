@@ -38,6 +38,6 @@ e.preventDefault()
     do 
         password +=total[Math.floor(Math.random()*total.length)]
         while (password.length <= limite)
-    divContra.innerHTML=`<p>tu contraseña es:<br>
-                        <span>${password}</span></p>`      
+    divContra.innerHTML=`<h4>tu contraseña es:<br>
+                        <span>${password}</span></h4>`      
 })

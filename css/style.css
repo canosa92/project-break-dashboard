@@ -67,21 +67,21 @@ nav a{
     padding: 0px 10px;
     flex-wrap: nowrap;
 }
-
-/*vamos con el main */
-section{
-    gap:10px;
-    display: flex;
-    flex-wrap: nowrap;
-    
+img{
+    width: 30px;
 }
-#reloj,#links,#contraseñas{
-    margin: 20px;
+/*vamos con el main */
+main{
+    display: flex;
+    gap:10px;
 
-    background-color: rgba(0, 0, 0, 0.758);
+}
+#reloj,#links,#contraseñas,#clima{
+    margin: 20px;
+    background-color: rgba(0, 0, 0, 0.562);
     font-size: 20px;
     color: aliceblue;
-    border: 2px rgb(255, 255, 255) solid;
+    border: 2px rgba(255, 255, 255, 0.445) solid;
 }
 .containerReloj{
     margin: 20px;
@@ -126,39 +126,39 @@ button{
     width: 100px;
     margin: 10px;
 }
-p{
-    font-size: 14px;;
+#favoritos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap:10px
 }
 .divLink{
-    color: blue;
-    cursor: pointer;
-   background-color: aquamarine;
-   height:50px;
+   background-color: rgb(64, 65, 64);
+   height:40px;
    width: 75px;
-   border-radius: 10%;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: space-around; 
+   border-radius: 15%;
    border: 2px rgba(255, 0, 0, 0.644) solid;
+   position: relative;
+}
+.btnLink{
+    font-size: 11px;
+    width: 20px;
+    height: 20px;
+    border-radius: 45%;
+    color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.479);
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 .divLink a{
     text-decoration: none;
-    color: black;
-    font-size: 24px;
-text-align: center;
-}
-.btnLink{
-    margin-top: 5px;
-    margin-left: 50px;
-    font-size: 9px;
-    width: 20px;
-    height: 20px;
-    padding: 5px;
-    border-radius: 45%;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-align: center;
 }
 
 span{
-    color: rgb(250, 27, 27);
-    background-color: rgba(0, 255, 255, 0.356);
+    color: rgb(253, 4, 4);
 }

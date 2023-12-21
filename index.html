@@ -12,16 +12,24 @@
             Dashboard
         </h4>
         <nav>
-            <a href="./html/reloj.html">⌚</a> 
-            <a href="./html/clima.html">Clima</a>
-            <a href="./html/creadorLink.html">Creador links</a>
-            <a href="./html/contrasenas.html">🔓</a>
+            <a href="./html/reloj.html"><img src="./assets/iconos/reloj.png"></a> 
+            <a href="./html/clima.html"><img src="./assets/iconos/parcialmente-nublado.png"></a>
+            <a href="./html/creadorLink.html"><img src="./assets/iconos/cadena.png"></a>
+            <a href="./html/contrasenas.html"><img src="./assets/iconos/candado.png"></a>
         </nav>
     </header>
 <main>
-<section>
-<article id="reloj"> 
-</article>
+<section id="creadores">
+    <article id="contraseñas">
+        <form>
+            <legend>Creador contraseñas</legend>
+            <label for="number">Escoje un numero</label>
+            <div>
+                <input id="number" type="number" min="12" max="50" step="1" value="12"><button class="btn" id="btn_contraseña">Crear</button>
+            </div>
+            <div id="div_contra"></div>
+        </form>
+    </article>
 <article id="links">
     <form>
         <legend>Introduzca tus enlaces de interes</legend>
@@ -32,17 +40,13 @@
         <button class="btn" id="btn_guardar">Guardar</button>
         <ul id="favoritos"></ul>
     </form>
-    
 </article>
-<article id="contraseñas">
-    <form>
-        <legend>Creador contraseñas</legend>
-        <label for="number">Escoje un numero</label>
-        <input id="number" type="number" min="12" max="50" step="1" value="12">
-        <button class="btn" id="btn_contraseña">Crear</button>
-        <div id="div_contra"></div>
-    </form>
+</section>
+<section>
+<article id="reloj"> 
 </article>
+
+</section>
 </main>    
 </body>
 <script src="./js/script.js"></script>

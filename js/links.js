@@ -34,14 +34,14 @@ btnguardar.addEventListener('click',(e)=>{
 function dibujarLink(nombreLink,link){ 
     let  divLink=document.createElement('li') 
 
-    let html =`<div class='divLink'>
-    <p><a href='${link}'>${nombreLink}</a></p>
+    let html =`<div class='divLink'> 
     <button class="btnLink" onclick="eliminarLinks(this)">X</button>
+    <p><a href='${link}'>${nombreLink}</a></p>
+  
     </div>`
 
     divLink.innerHTML=html
     favoritos.appendChild(divLink)
-    console.log(html)
 
 }
 function mostrarLinks(){
