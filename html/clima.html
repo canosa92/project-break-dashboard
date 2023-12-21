@@ -9,29 +9,29 @@
 <body>
     <header>
         <h4>
-          contraseñas
+           Clima
         </h4>
         <nav>
             <a href="../Index.html">Home</a>
             <a href="../html/reloj.html">⌚</a> 
-            <a href="../html/clima.html">Clima</a>
             <a href="../html/creadorLink.html">Creador links</a>
             <a href="../html/contrasenas.html">🔓</a>
         </nav>
     </header>
 <main>
 <section>
-    <article id="contraseñas">
-        <form>
-            <legend>Creador contraseñas</legend>
-            <label for="number">Escoje un numero</label>
-            <input id="number" type="number" min="12" max="50" step="1" value="12">
-            <button class="btn" id="btn_contraseña">Crear</button>
-            <div id="div_contra"></div>
-        </form>
+    <article id="clima">
+        <form id="city-form">
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="city" name="ciudad" required />
+            <label for="pais">Pais:</label>
+            <input type="text" id="pais" name="pais" required />
+            <button type="submit" id="btn-clima">Consultar</button>
+          </form>
     </article>
-</section>
-</main>
+<body>
+    
 </body>
-<script src="../js/contrasenas.js"></script>
+<script src="../js/clima.js"></script>
+
 </html>

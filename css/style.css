@@ -71,39 +71,38 @@ nav a{
 /*vamos con el main */
 section{
     gap:10px;
-    flex-wrap: nowrap;
     display: flex;
+    flex-wrap: nowrap;
+    
 }
 #reloj,#links,#contraseñas{
-    padding: 50px 0px;
-    display: flex; 
-     width: 200px;
-    height:auto;
-    justify-content: center;
+    margin: 20px;
+
+    background-color: rgba(0, 0, 0, 0.758);
+    font-size: 20px;
+    color: aliceblue;
+    border: 2px rgb(255, 255, 255) solid;
 }
 .containerReloj{
-    font-size: 20px;
-    border: 2px black solid;
-    padding:20px;
-    background-color: antiquewhite;
-    font-style:initial;
-  
+    margin: 20px;
 }
 .divDia{
+    margin: 20px;
     font-size: 30px;
     padding-top: 10px;
     font-weight: 600;
 }
 .divHora{  
+    margin: 20px;
     padding: 10px 0px;
     font-weight: 800;
     font-size: 30px;
-    text-shadow: 1px -4px 7px rgba(13,43,253,0.6); ;
+    text-shadow: 1px -4px 7px rgba(255, 0, 0, 0.897); ;
 }
 
 form{
     display: flex;
-    background-color: beige;
+
     justify-content: center;
     flex-direction: column;
     padding: 10px;
