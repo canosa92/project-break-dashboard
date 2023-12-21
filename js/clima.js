@@ -43,7 +43,7 @@ async function pintarClima(datos){
       const divClima= document.createElement('div')
       divClima.classList.add("container_clima")
       let html= `<h3>${localizacion}</h3>
-                  <p>${condicion}</p>`
+                  <p>${condicion} <img src='${iconCondicion}'></p>`
         divClima.innerHTML=html
 clima.appendChild(divClima)
 }
