@@ -49,10 +49,10 @@ async function pintarClima(datos){
                   <div class='clima_profundo'>
                   <img src='${iconCondicion}'> 
                   <h3>${temp_c}ºC</h3>
-                  <div>
+                  <div class='climatexto'>
                   <p>Humedad: ${humidity}%</p>
                   <p>Sensacion: ${feelslike_c}ºC</p>
-                  <p>Viento :${wind_kph}Km/h</p>
+                  <p>Viento: ${wind_kph}Km/h</p>
                   <p>Precipitaciones: ${precip_mm}%</p>
                   </div>
                   </div>
@@ -67,10 +67,10 @@ divHoras.classList.add('climaXhoras')
             let hour = time.slice(-5);
     
             let templateHoras = `
-                <div class >
+                <div class='climaHorario' >
                     <p>${hour}</p>
-                    <img src="${hora.condition.icon}" alt="">
-                    <p>${hora.temp_c}ºC</p>
+                    <img src="${hora.condition.icon}">
+                    <p>${hora.temp_c} ºC</p>
                 </div>
             `;
             divHoras.innerHTML += templateHoras; })

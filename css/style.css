@@ -78,12 +78,12 @@ main{
     gap:10px;
     justify-content: center;
 }
-@media only screen and (min-device-width : 320px) and (max-device-width : 800px){
+@media only screen and (min-device-width : 100px) and (max-device-width : 800px){
     main{
         flex-direction: column;
     }
    section{
-       margin: 50px;
+       margin: 25px;
     }
 } 
 article{
@@ -197,13 +197,33 @@ span{
     background-color: rgba(140, 146, 146, 0.486);
 }
 /*Y por ultimo el estilo del clima*/
+.clima_basico h3{
+    font-size: 25px;
+}
+.clima_basico p{
+    font-size: 14px;
+    color:#b603fd;
+    padding: 5px;
+}
 .clima_profundo{
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
 }
-
+.clima_profundo img{
+    width: 90px;
+}
+.clima_profundo h3{
+   font-size: 40px;
+}
+p{
+    font-size: 17px;
+    padding: 2px;
+}
+.climaHorario img{
+width: 35px;
+}
 .climaXhoras {
     max-width: 400px; /* Ancho máximo del contenedor */
     overflow-x: auto; /* Habilitar el scroll horizontal cuando se excede el ancho */
