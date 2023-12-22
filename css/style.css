@@ -45,6 +45,7 @@ table {
 
 body{
     background-size:cover;
+    font-family: 'Libre Baskerville', serif;
 }
 /*empezamos a crear los estilos del header*/
 header{
@@ -52,9 +53,9 @@ header{
     justify-content: space-around;
     align-items: center;
     background: rgb(34,195,96);
-background: rgba(0, 0, 0, 0.308);
-color: rgb(235, 224, 208);
-padding: 20px 0px;
+    background: rgba(0, 0, 0, 0.308);
+    color: rgb(235, 224, 208);
+    padding: 20px 0px;
 }
 header h4{
     font-size: 30px;
@@ -70,63 +71,90 @@ nav a{
 img{
     width: 25px;
 }
-/*vamos con el main */
+/*vamos con el main
+tambien le daremos  resposive para que se vea bien en dispositivos moviles*/
 main{
     display: flex;
     gap:10px;
     justify-content: center;
-
 }
+@media only screen and (min-device-width : 320px) and (max-device-width : 800px){
+    main{
+        flex-direction: column;
+    }
+   section{
+       margin: 50px;
+    }
+} 
 article{
     margin: 20px;
-    background-color: rgba(0, 0, 0, 0.562);
+    padding: 10px;
+    background-color: rgba(1, 5, 4, 0.356);
     font-size: 20px;
-    color: aliceblue;
-    border: 2px rgba(255, 255, 255, 0.445) solid;
-    width: 300px;
+    color: rgb(255, 255, 255);
+    border: none;
+    width: auto;
+    max-width: 400px;
+    text-shadow: 2px 4px 7px black;
 }
+button{
+    height: 25px;
+    width: 100px;
+    margin: 5px 0px 15px 0px;
+    background-color: rgba(41, 40, 40, 0.644);
+    color: white;
+}
+button:hover{
+    box-shadow:2px 4px 7px black;
+}
+input{
+    font-size: 14px;
+    height: 15px;
+    width: auto;
+    margin: 5px 0px;
+}
+input:hover{
+    height: 17px;
+    background-color: 1px black solid;
+    box-shadow:2px 4px 7px black;
+}
+/*Damos estilo al div del reloj y todos los elementos*/
 .containerReloj{
-    margin: 20px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 4px 7px black;
 }
 .divDia{
     margin: 20px;
-    font-size: 30px;
+    font-size: 45px;
     padding-top: 10px;
     font-weight: 600;
+    
 }
 .divHora{  
     margin: 20px;
     padding: 10px 0px;
     font-weight: 800;
-    font-size: 30px;
-    text-shadow: 1px -4px 7px rgba(255, 0, 0, 0.897); ;
+    font-size: 60px;
+    text-shadow: 2px 4px 7px rgba(52, 211, 216, 0.699);
 }
-
+/*Damos estilo al div de creador de contraseñas
+tambien a sus componentes*/
 form{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 10px;
 }
 legend{
     font-size: 20px;
     padding-bottom: 10px;
-}
-label, input[type="text"]{
-    margin: 5px;
+    text-decoration: underline;
 }
 label{
-font-size: 16px;
+    font-size:17px;
 }
-input[type="text"]{
-    height: 15px;
-    width: auto;
-}
-button{
-    height: 25px;
-    width: 100px;
-    margin: 10px;
-}
+
+
 #favoritos{
     display: flex;
     flex-direction: row;
@@ -173,7 +201,7 @@ span{
 }
 
 .climaXhoras {
-    max-width: 300px; /* Ancho máximo del contenedor */
+    max-width: 400px; /* Ancho máximo del contenedor */
     overflow-x: auto; /* Habilitar el scroll horizontal cuando se excede el ancho */
     white-space: nowrap; /* Evitar saltos de línea para que los elementos se muestren en una sola fila */
 }
