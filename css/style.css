@@ -158,7 +158,7 @@ form{
     gap:10px;
     background-color: rgba(190, 188, 185, 0.39);
     padding: 5px;
-    width: auto;    
+    width: auto;
 }
 .divLink{
    background-color: rgba(64, 73, 64, 0.555);
@@ -174,25 +174,29 @@ form{
     height: auto;
     border-radius: 45%;
     color: aliceblue;
-    background-color: rgba(0, 0, 0, 0.479);
+    background-color: rgba(0, 0, 0, 0.966);
     cursor: pointer;
     position: absolute;
     right: -10px;
    bottom: 7px;
-   
 }
 .divLink a{
-
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-size: 15px;
     margin: 15px;
 }
-
-span{
-    color: rgb(253, 4, 4);
+/*Creador de contraseñas*/
+h5{
+    font-size: 14px;
+    padding: 5px 0px;
 }
-
+span{
+    margin: 5px 0px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(140, 146, 146, 0.486);
+}
+/*Y por ultimo el estilo del clima*/
 .clima_profundo{
     display: flex;
     justify-content: space-between;

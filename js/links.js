@@ -37,7 +37,7 @@ function dibujarLink(nombreLink,link){
 
     let html =`<div class='divLink'> 
     <button class="btnLink" onclick="eliminarLinks(this)">X</button>
-    <p><a href='${link}'>${nombreLink}</a></p>
+    <p><a href='${link}' target='_blank'>${nombreLink}</a></p>
   
     </div>`
 

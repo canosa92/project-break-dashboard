@@ -77,8 +77,6 @@ reloj.appendChild(containerReloj)
 const btnguardar= document.getElementById('btn_guardar')
 const favoritos=document.getElementById('favoritos')
 
-
-
 btnguardar.addEventListener('click',(e)=>{
      e.preventDefault()
     let nombreLink =document.getElementById('nombre').value
@@ -98,7 +96,7 @@ function dibujarLink(nombreLink,link){
 
     let html =`<div class='divLink'>
     <button class="btnLink" onclick="eliminarLinks(this)">X</button>
-    <p><a href='${link}'>${nombreLink}</a></p>
+    <p><a href='${link}' target='_blank'>${nombreLink}</a></p>
     </div>`
 
     divLink.innerHTML=html
@@ -143,8 +141,8 @@ e.preventDefault()
     do 
         password +=total[Math.floor(Math.random()*total.length)]
         while (password.length <= limite)
-        divContra.innerHTML=`<h4>tu contraseña es:<br>
-                        <span>${password}</span></h4>`   
+        divContra.innerHTML=`<h5>tu contraseña es:<br>
+                        <span>${password}</span></h5>`   
 })
 
 const clima=document.getElementById('clima')
