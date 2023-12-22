@@ -30,6 +30,7 @@ btnguardar.addEventListener('click',(e)=>{
     let guardarLinks=JSON.parse(localStorage.getItem('links'))||[]
     guardarLinks.push({nombreLink,link})
     localStorage.setItem(`links`,JSON.stringify(guardarLinks))
+
 })
 function dibujarLink(nombreLink,link){ 
     let  divLink=document.createElement('li') 

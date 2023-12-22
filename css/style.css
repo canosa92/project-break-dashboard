@@ -88,7 +88,7 @@ main{
 } 
 article{
     margin: 20px;
-    padding: 10px;
+    padding: 15px;
     background-color: rgba(1, 5, 4, 0.356);
     font-size: 20px;
     color: rgb(255, 255, 255);
@@ -118,6 +118,14 @@ input:hover{
     background-color: 1px black solid;
     box-shadow:2px 4px 7px black;
 }
+legend{
+    font-size: 20px;
+    padding-bottom: 10px;
+    text-decoration: underline;
+}
+label{
+    font-size:15px;
+}
 /*Damos estilo al div del reloj y todos los elementos*/
 .containerReloj{
     font-size: 20px;
@@ -128,12 +136,10 @@ input:hover{
     margin: 20px;
     font-size: 45px;
     padding-top: 10px;
-    font-weight: 600;
-    
 }
 .divHora{  
-    margin: 20px;
-    padding: 10px 0px;
+    margin-left: 20px ;
+    padding-top: 10px;
     font-weight: 800;
     font-size: 60px;
     text-shadow: 2px 4px 7px rgba(52, 211, 216, 0.699);
@@ -145,28 +151,21 @@ form{
     justify-content: center;
     flex-direction: column;
 }
-legend{
-    font-size: 20px;
-    padding-bottom: 10px;
-    text-decoration: underline;
-}
-label{
-    font-size:17px;
-}
-
-
 #favoritos{
     display: flex;
-    flex-direction: row;
+    justify-content: flex-start;
     flex-wrap: nowrap;
-    gap:10px
+    gap:10px;
+    background-color: rgba(190, 188, 185, 0.39);
+    padding: 5px;
+    width: auto;    
 }
 .divLink{
-   background-color: rgb(64, 65, 64);
-   height:40px;
-   width: 75px;
+   background-color: rgba(64, 73, 64, 0.555);
+   height:30px;
+   width: auto;
    border-radius: 15%;
-   border: 2px rgba(255, 0, 0, 0.644) solid;
+   border: 2px rgba(3, 3, 3, 0.644) solid;
    position: relative;
 }
 .btnLink{
@@ -179,14 +178,15 @@ label{
     cursor: pointer;
     position: absolute;
     right: -10px;
-   bottom: 18px;
+   bottom: 7px;
    
 }
 .divLink a{
+
     text-decoration: none;
     color: rgb(255, 255, 255);
-    font-size: 20px;
-    margin: 10px;
+    font-size: 15px;
+    margin: 15px;
 }
 
 span{
