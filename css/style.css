@@ -52,7 +52,6 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background: rgb(34,195,96);
     background: rgba(0, 0, 0, 0.308);
     color: rgb(235, 224, 208);
     padding: 20px 0px;
@@ -201,9 +200,10 @@ span{
     font-size: 25px;
 }
 .clima_basico p{
-    font-size: 14px;
+    font-size: 16px;
     color:#b603fd;
     padding: 5px;
+    text-shadow: 1px 2px 3px black;
 }
 .clima_profundo{
     display: flex;
