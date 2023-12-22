@@ -73,7 +73,8 @@ divHoras.classList.add('climaXhoras')
                     <p>${hora.temp_c} ºC</p>
                 </div>
             `;
-            divHoras.innerHTML += templateHoras; })
+            divHoras.innerHTML += templateHoras; 
+        })
 
 
 clima.appendChild(divClima)

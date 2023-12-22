@@ -9,13 +9,11 @@ const fondo =()=>{
 }
 //le damos intervalo de tiempo para que se vaya repitiendo la funcion fondo
 setInterval(()=>fondo(),15000)
-
+fondo()
 
 
 const btnguardar= document.getElementById('btn_guardar')
 const favoritos=document.getElementById('favoritos')
-
-
 
 btnguardar.addEventListener('click',(e)=>{
      e.preventDefault()
@@ -60,15 +58,4 @@ function eliminarLinks(elemento){
     linksGuardados.splice(linkIndex,1)
     localStorage.setItem("links",JSON.stringify(linksGuardados))
 }
-
-fondo()
-
-
-
-
-
-
-
-
-fondo()
 
