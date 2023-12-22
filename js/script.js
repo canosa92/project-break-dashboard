@@ -1,11 +1,11 @@
 /*Vamos con el fondo aleatorio*/
 //traemos el body
 const body =document.querySelector('body')
-//creamos una funcion que nos de fondos aleatorios
+
 const fondo =()=>{
     const numAleat = Math.floor(Math.random() * 11)+1;
-    body.style.backgroundImage = `url("../assets/img/${numAleat}.jpg")`;
-}
+    body.style.backgroundImage = `url("./assets/img/${numAleat}.jpg")`;
+}   
 //le damos intervalo de tiempo para que se vaya repitiendo la funcion fondo
 setInterval(()=>fondo(),15000)
 fondo()
@@ -106,7 +106,7 @@ function dibujarLink(nombreLink,link){
 }
 function mostrarLinks(){
     const linksGuardados= JSON.parse(localStorage.getItem('links'));
-    linksGuardados.forEach((nombreLink) => {
+    linksGuardados.forEach((nombreLink,link) => {
         dibujarLink(nombreLink.nombreLink,nombreLink.link);
         
     });
