@@ -8,6 +8,7 @@ const fondo =()=>{
 }
 //le damos intervalo de tiempo para que se vaya repitiendo la funcion fondo
 setInterval(()=>fondo(),15000)
+fondo()
 
 //creamos el scrpit para el reloj
 const reloj =document.getElementById('reloj')
@@ -105,7 +106,7 @@ function dibujarLink(nombreLink,link){
 }
 function mostrarLinks(){
     const linksGuardados= JSON.parse(localStorage.getItem('links'));
-    linksGuardados.forEach((nombreLink,) => {
+    linksGuardados.forEach((nombreLink) => {
         dibujarLink(nombreLink.nombreLink,nombreLink.link);
         
     });
@@ -215,4 +216,3 @@ clima.appendChild(divHoras)
 }
 obtenerClima()
 horaActual()
-fondo()
