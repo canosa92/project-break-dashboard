@@ -196,20 +196,21 @@ async function pintarClima(datos){
         let horas = datos.forecast.forecastday[0].hour;
         const divHoras= document.createElement('div')
         divHoras.classList.add('climaXhoras')
-                horas.forEach(hora => {
-                    let time = hora.time;
-                    let hour = time.slice(-5);
-            
-                    let templateHoras = `
-                        <div class='climaHorario' >
-                            <p>${hour}</p>
-                            <img src="${hora.condition.icon}">
-                            <p>${hora.temp_c} ºC</p>
-                        </div>
-                    `;
-                    divHoras.innerHTML += templateHoras; 
-                })
-
+        const horasHTML = horas.map((hora) => {
+            let tiempo = hora.time;
+            let hour = tiempo.slice(-5);
+        
+            let templateHoras = `
+              <div class="climaHorario">
+                <p>${hour}</p>
+                <img src="${hora.condition.icon}">
+                <p>${hora.temp_c} ºC</p>
+              </div>
+            `;
+        
+            return templateHoras;
+          });
+          divHoras.innerHTML = horasHTML.join('');
 
 clima.appendChild(divClima)
 clima.appendChild(divHoras)
